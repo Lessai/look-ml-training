@@ -11,3 +11,5 @@ datagroup: training_viktoryia_krauchanka_default_datagroup {
 persist_with: training_viktoryia_krauchanka_default_datagroup
 
 explore: order_items {}
+
+explore: users {}
