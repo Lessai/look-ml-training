@@ -27,7 +27,7 @@ view: users {
 
   dimension: city_and_state {
     type: string
-    sql: ${city} || ',' || ${state} ;;
+    sql: ${city} || ', ' || ${state} ;;
   }
 
   dimension: age_tier {
@@ -35,6 +35,11 @@ view: users {
     tiers: [18, 25, 35, 45, 55, 65]
     sql: ${age} ;;
     style: integer
+  }
+
+  dimension: is_email_traffic_source {
+    type: yesno
+    sql: ${traffic_source} = 'Email' ;;
   }
 
   dimension_group: created {
